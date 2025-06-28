@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./home.css";
 import Header from "@/components/header/header";
 
 const geistSans = Geist({
@@ -23,10 +24,11 @@ export default function RootLayout({ children }) {
       <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" ></link>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" ></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
         <main className='container'>
+        <Header />
         {children}
         </main>
       </body>
